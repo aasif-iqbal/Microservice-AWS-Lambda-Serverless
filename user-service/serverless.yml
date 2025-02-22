@@ -4,6 +4,11 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs20.x
+  versionFunctions: false
+  stage: "dev"
+  region: ap-south-1
+  httpApi:
+    cors: true
 
 functions:
   signup:
@@ -11,7 +16,13 @@ functions:
     events:
       - httpApi:
           path: /signup
-          method: get
+          method: post
+  login:
+      handler: app/handler.Login
+      events:
+        - httpApi:
+            path: /login
+            method: post          
 
 plugins:
   - serverless-offline

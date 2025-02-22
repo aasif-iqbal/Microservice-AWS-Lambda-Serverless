@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Signup = void 0;
+exports.Login = exports.Signup = void 0;
 const Signup = (event) => __awaiter(void 0, void 0, void 0, function* () {
     console.log('----------------start----------------');
     console.log(event);
@@ -22,4 +22,24 @@ const Signup = (event) => __awaiter(void 0, void 0, void 0, function* () {
     };
 });
 exports.Signup = Signup;
+const Login = (event) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const body = JSON.parse(event.body);
+        console.log(event);
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                message: 'Login Successfully',
+                input: event,
+            }),
+        };
+    }
+    catch (error) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ message: "Internal Server Error", error }),
+        };
+    }
+});
+exports.Login = Login;
 //# sourceMappingURL=handler.js.map
