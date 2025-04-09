@@ -1,17 +1,11 @@
-Resale product portal (like ebay) C2C
-
-Need to build a web application which can facilitate the buy, sale new & used/old products in certain price range. Where seller can post products and advertise it for sale and guyer can search and view product as per choice and buy it online.
-Application should provide features to talk to buyer with seller directly without mediator and buy the products by paying the price. Payment system will collect the money of the product and certain % of the final product price will be hold for platform and rest of will be release to seller. Buyer can rate the experience of purchase, seller, delivery etc. The communications of every process will be notify through sms and email notification.
-
-### Flow
-```txt
-https://whimsical.com/nodejs-microservice-with-sls-U8x7rhE232reoZEVhH6RrR
-```
+## Setup AWS Lambda for Serverless framework
 
 1. install serverless (v3 recommended for typescript support, v4 uses bundler)
 
 ```lua
+npm install -g serverless@3
 
+serverless --version
 ```
 2. install aws cli
 ```lua
