@@ -74,4 +74,3 @@ serverless plugin install -n serverless-offline
 
 npm install --save-dev serverless-plugin-typescript serverless-offline --legacy-peer-deps
 ```
-
